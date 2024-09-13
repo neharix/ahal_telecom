@@ -9,7 +9,18 @@
 
 	{% block body %}
 		<main>
-			<div class="row cards">
+			<div class="d-flex align-items-center" id="categories-row">
+				<div class="c-btn">
+					<a href="#">Hello</a>
+				</div>
+				<div class="c-btn">
+					<a href="#">Hello</a>
+				</div>
+				<div class="c-btn">
+					<a href="#">Hello</a>
+				</div>
+			</div>
+			<div class="row cards my-5 mx-auto">
 				<div class="card">
 					<div class="face face1">
 						<div class="content">
@@ -19,7 +30,7 @@
 							<p class="java">Baglanyşyk ýygylygy: 12ms</p>
 						</div>
 					</div>
-					<div class="face face2">
+					<div class="face face2" style="background: linear-gradient(0deg, rgba(0, 255, 225, 0.3), rgba(8, 0, 255, 0.3)), url({% static 'img/moxa.jpg' %});">
 						<h2>AMQ</h2>
 					</div>
 				</div>

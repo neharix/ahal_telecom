@@ -1,7 +1,7 @@
 main {
     box-sizing: border-box;
-    display: flex;
     justify-content: center;
+    width: 75vw;
 }
 
 .card {
@@ -49,7 +49,7 @@ main {
     margin: 0;
     padding: 0;
     font-size: 7em;
-    color: #fff;
+    color: #ffffff;
     transition: 0.5s;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 10;
@@ -64,7 +64,7 @@ main {
 }
 
 .card .face.face2 {
-    background-image: linear-gradient(40deg, #4800ff 0%, #0055ff 45%, #00fffc 100%);
+    background-size: cover !important;
     border-radius: 15px;
 }
 

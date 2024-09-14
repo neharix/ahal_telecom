@@ -4,6 +4,11 @@ main {
     width: 75vw;
 }
 
+#cards-box {
+    width: 100%;
+    overflow-y: auto;
+}
+
 .card {
     position: relative;
     width: 300px;
@@ -11,7 +16,7 @@ main {
     margin: 0 auto;
     background: #000;
     border-radius: 15px;
-    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card .face {
@@ -48,7 +53,7 @@ main {
 .card .face.face2 h2 {
     margin: 0;
     padding: 0;
-    font-size: 7em;
+    font-size: 4em;
     color: #ffffff;
     transition: 0.5s;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -75,4 +80,17 @@ main {
 
 p{
     margin-top: 10px;
+}
+
+#cards-box::-webkit-scrollbar{
+    height: 5px;
+}
+
+#cards-box::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+#cards-box::-webkit-scrollbar-thumb {
+    background-color: transparent;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 3px solid transparent;  /* padding вокруг плашки */
 }

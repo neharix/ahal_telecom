@@ -9,94 +9,102 @@
 
 	{% block body %}
 		<main>
-			<div class="d-flex align-items-center" id="categories-row">
+			<div class="d-flex align-items-center my-3" id="categories-row">
 				<div class="c-btn">
-					<a href="#">Hello</a>
+					<a href="#" class="stable-color">Durnukly</a>
 				</div>
 				<div class="c-btn">
-					<a href="#">Hello</a>
+					<a href="#" class="stable-color">Näsazlyk</a>
 				</div>
 				<div class="c-btn">
-					<a href="#">Hello</a>
+					<a href="#" class="stable-color">Düzedilmez ýagdaýda</a>
 				</div>
 			</div>
-			<div class="row cards my-5 mx-auto">
-				<div class="card">
-					<div class="face face1">
-						<div class="content">
-							<span class="stars"></span>
-							<h2 class="java">AMQ enjamy</h2>
-							<p class="java">Ýagdaýy: gurat</p>
-							<p class="java">Baglanyşyk ýygylygy: 12ms</p>
+			<div id="cards-box">
+				{% for device_type in device_types %}
+				<div class="my-2 d-header">{{ device_type.name }}</div>
+				<div class="row cards mx-auto" id="{{ device_type.short }}">{% include "components/loader.html" %}</div>
+				{% endfor %}
+				
+				{% comment %} <div class="row cards mx-auto">
+					<div class="card">
+						<div class="face face1">
+							<div class="content">
+								<span class="stars"></span>
+								<h2 class="java">AMQ enjamy</h2>
+								<p class="java">Ýagdaýy: gurat</p>
+								<p class="java">Baglanyşyk ýygylygy: 12ms</p>
+							</div>
+						</div>
+						<div class="face face2" style="background: linear-gradient(0deg, rgba(4, 21, 30, 0.6), rgba(5, 3, 59, 0.6)), url({% static 'img/moxa.jpg' %});">
+							<h2>Ubuntu</h2>
 						</div>
 					</div>
-					<div class="face face2" style="background: linear-gradient(0deg, rgba(0, 255, 225, 0.3), rgba(8, 0, 255, 0.3)), url({% static 'img/moxa.jpg' %});">
-						<h2>AMQ</h2>
-					</div>
-				</div>
-				<div class="card">
-					<div class="face face1">
-						<div class="content">
-							<span class="stars"></span>
-							<h2 class="java">Java</h2>
-							<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+					<div class="card">
+						<div class="face face1">
+							<div class="content">
+								<span class="stars"></span>
+								<h2 class="java">Java</h2>
+								<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+							</div>
+						</div>
+						<div class="face face2">
+							<h2>AMQ</h2>
 						</div>
 					</div>
-					<div class="face face2">
-						<h2>AMQ</h2>
-					</div>
-				</div>
-				<div class="card">
-					<div class="face face1">
-						<div class="content">
-							<span class="stars"></span>
-							<h2 class="java">Java</h2>
-							<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+					<div class="card">
+						<div class="face face1">
+							<div class="content">
+								<span class="stars"></span>
+								<h2 class="java">Java</h2>
+								<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+							</div>
+						</div>
+						<div class="face face2">
+							<h2>AMQ</h2>
 						</div>
 					</div>
-					<div class="face face2">
-						<h2>AMQ</h2>
-					</div>
-				</div>
-				<div class="card">
-					<div class="face face1">
-						<div class="content">
-							<span class="stars"></span>
-							<h2 class="java">Java</h2>
-							<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+					<div class="card">
+						<div class="face face1">
+							<div class="content">
+								<span class="stars"></span>
+								<h2 class="java">Java</h2>
+								<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+							</div>
+						</div>
+						<div class="face face2">
+							<h2>AMQ</h2>
 						</div>
 					</div>
-					<div class="face face2">
-						<h2>AMQ</h2>
-					</div>
-				</div>
-				<div class="card">
-					<div class="face face1">
-						<div class="content">
-							<span class="stars"></span>
-							<h2 class="java">Java</h2>
-							<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+					<div class="card">
+						<div class="face face1">
+							<div class="content">
+								<span class="stars"></span>
+								<h2 class="java">Java</h2>
+								<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+							</div>
+						</div>
+						<div class="face face2">
+							<h2>AMQ</h2>
 						</div>
 					</div>
-					<div class="face face2">
-						<h2>AMQ</h2>
-					</div>
-				</div>
-				<div class="card">
-					<div class="face face1">
-						<div class="content">
-							<span class="stars"></span>
-							<h2 class="java">Java</h2>
-							<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+					<div class="card">
+						<div class="face face1">
+							<div class="content">
+								<span class="stars"></span>
+								<h2 class="java">Java</h2>
+								<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+							</div>
+						</div>
+						<div class="face face2">
+							<h2>AMQ</h2>
 						</div>
 					</div>
-					<div class="face face2">
-						<h2>AMQ</h2>
-					</div>
-				</div>
+				</div> {% endcomment %}
 			</div>
 		</main>
 	</div>
 	{% endblock body %}
 	{% block scripts %}
+    <script src="{% static 'js/main.js' %}"></script>
 	{% endblock scripts %}

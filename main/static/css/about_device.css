@@ -1,0 +1,17 @@
+#box {
+    width: 100%;
+    overflow-y: auto;
+}
+
+#box::-webkit-scrollbar{
+    height: 5px;
+}
+
+#box::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+#box::-webkit-scrollbar-thumb {
+    background-color: transparent;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 3px solid transparent;  /* padding вокруг плашки */
+}

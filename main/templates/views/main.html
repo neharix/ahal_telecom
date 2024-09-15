@@ -23,84 +23,8 @@
 			<div id="cards-box">
 				{% for device_type in device_types %}
 				<div class="my-2 d-header">{{ device_type.name }}</div>
-				<div class="row cards mx-auto" id="{{ device_type.short }}">{% include "components/loader.html" %}</div>
+				<div class="row cards py-4 mx-auto" id="{{ device_type.short }}"></div>
 				{% endfor %}
-				
-				{% comment %} <div class="row cards mx-auto">
-					<div class="card">
-						<div class="face face1">
-							<div class="content">
-								<span class="stars"></span>
-								<h2 class="java">AMQ enjamy</h2>
-								<p class="java">Ýagdaýy: gurat</p>
-								<p class="java">Baglanyşyk ýygylygy: 12ms</p>
-							</div>
-						</div>
-						<div class="face face2" style="background: linear-gradient(0deg, rgba(4, 21, 30, 0.6), rgba(5, 3, 59, 0.6)), url({% static 'img/moxa.jpg' %});">
-							<h2>Ubuntu</h2>
-						</div>
-					</div>
-					<div class="card">
-						<div class="face face1">
-							<div class="content">
-								<span class="stars"></span>
-								<h2 class="java">Java</h2>
-								<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
-							</div>
-						</div>
-						<div class="face face2">
-							<h2>AMQ</h2>
-						</div>
-					</div>
-					<div class="card">
-						<div class="face face1">
-							<div class="content">
-								<span class="stars"></span>
-								<h2 class="java">Java</h2>
-								<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
-							</div>
-						</div>
-						<div class="face face2">
-							<h2>AMQ</h2>
-						</div>
-					</div>
-					<div class="card">
-						<div class="face face1">
-							<div class="content">
-								<span class="stars"></span>
-								<h2 class="java">Java</h2>
-								<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
-							</div>
-						</div>
-						<div class="face face2">
-							<h2>AMQ</h2>
-						</div>
-					</div>
-					<div class="card">
-						<div class="face face1">
-							<div class="content">
-								<span class="stars"></span>
-								<h2 class="java">Java</h2>
-								<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
-							</div>
-						</div>
-						<div class="face face2">
-							<h2>AMQ</h2>
-						</div>
-					</div>
-					<div class="card">
-						<div class="face face1">
-							<div class="content">
-								<span class="stars"></span>
-								<h2 class="java">Java</h2>
-								<p class="java">Java is a class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
-							</div>
-						</div>
-						<div class="face face2">
-							<h2>AMQ</h2>
-						</div>
-					</div>
-				</div> {% endcomment %}
 			</div>
 		</main>
 	</div>

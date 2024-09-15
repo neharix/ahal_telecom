@@ -5,11 +5,13 @@ from rest_framework.response import Response
 
 from main.models import *
 
+from .containers import *
 from .serializers import *
 
 
 @api_view(["GET"])
 def devices_api_view(request: HttpRequest, slug: str):
     devices = Device.objects.filter(device_type__short=slug)
-    serializer = DeviceSerializer(devices, many=True)
+    devices_list = [DeviceContainer(device, slug) for device in devices]
+    serializer = DeviceSerializer(devices_list, many=True)
     return Response(serializer.data)

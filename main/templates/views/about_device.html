@@ -1,0 +1,31 @@
+{% extends "layouts/main_layout.html" %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/about_device.css' %}">
+{% endblock head %}
+{% block title %}
+"{{ device.name }}" barada
+{% endblock title %}
+{% block body %}
+<div id="box">
+    <!-- stubs -->
+    <div style="height: 200px">
+    </div>
+    <div style="height: 200px">
+    </div>
+    <div style="height: 200px">
+    </div>
+    <div style="height: 200px">
+    </div>
+    <div style="height: 200px">
+    </div>
+    <div style="height: 200px">
+    </div>
+    <div style="height: 200px">
+    </div>
+    
+</div>
+{% endblock body %}
+{% block scripts %}
+<script src="{% static 'js/about_device.js' %}"></script>
+{% endblock scripts %}

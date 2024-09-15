@@ -37,8 +37,8 @@ nav{
 }
 
 .vertical-divider {
-    border-left: 1px solid #0F0E0F;
-    border-right: 1px solid #111111;
+    border-left: 2px solid #0F0E0F;
+    border-right: 2px solid #111111;
     width: 3px;
     height: 100vh;
     background-color: #121212;
@@ -74,7 +74,11 @@ aside {
     align-items: center;
     width: max-content;
 }
-.logo-wrap div span {
+.logo-wrap a, .logo-wrap a span {
+    text-decoration: none;
+}
+
+.logo-wrap a span {
     font-family: Exo-Bold;
 }
 
@@ -349,4 +353,32 @@ body::-webkit-scrollbar-thumb:hover {
     margin-left: 30px;
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+.animated-link {
+    background: linear-gradient(to right, rgba(16, 15, 16, 1), rgba(16, 15, 16, 1)), linear-gradient(to right, rgba(109, 131, 242, 1), rgb(67, 93, 220, 1));
+    background-size: 100% 0.15em, 0 0.15em;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: all 400ms;
+    width: max-content;
+}
+
+.animated-link:hover,
+.animated-link:focus {
+    color: #ffffff;
+    background-size: 0 0.15em, 100% 0.15em;
+}
+
+.animated-inner-link:hover,
+.animated-inner-link:focus {
+    color: #ffffff;
+    background-size: 0 0.15em, 100% 0.15em;
+}
+.nav {
+    transition: color ease-out 0.2s;
+}
+.nav:hover{
+    color: #ffffff;
+    transition: color ease-out 0.2s;
 }

@@ -40,7 +40,7 @@ main {
     padding: 0;
 }
 
-.card .face.face1 .java {
+.card .face.face1 .text {
     background-color: #2c58c0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -53,7 +53,7 @@ main {
 .card .face.face2 h2 {
     margin: 0;
     padding: 0;
-    font-size: 4em;
+    font-size: 1.8em;
     color: #ffffff;
     transition: 0.5s;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -65,7 +65,7 @@ main {
 }
 
 .card:hover .face.face2 h2 {
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 .card .face.face2 {

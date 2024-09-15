@@ -15,19 +15,19 @@
             <aside>
                 <div class="aside-inner">
                     <div class="logo-wrap">
-                        <div><span class="logo-f">Ahal</span><span class="logo-s">TELECOM</span></div>
+                        <a href="/" class="animated-link"><span class="logo-f">Ahal</span><span class="logo-s">TELECOM</span></a>
                     </div>
                     <div class="list-wrap">
                         <h4>Ulgam menýusy</h4>
                         <ul>
                             <li>
-                                <a href="#" class="nav active">
+                                <a href="/" class="nav{% if current_page == 'main' %} active{% endif %}">
                                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path opacity="1" d="M6 9.85986V14.1499" stroke="#2c58c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path opacity="1" d="M9 8.43018V15.5702" stroke="#2c58c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path opacity="1" d="M12 7V17" stroke="#2c58c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path opacity="1" d="M15 8.43018V15.5702" stroke="#2c58c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path opacity="1" d="M18 9.85986V14.1499" stroke="#2c58c0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="1" d="M6 9.85986V14.1499" stroke="{% if current_page == 'main' %}#2c58c0{% else %}#5e5e64{% endif %}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="1" d="M9 8.43018V15.5702" stroke="{% if current_page == 'main' %}#2c58c0{% else %}#5e5e64{% endif %}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="1" d="M12 7V17" stroke="{% if current_page == 'main' %}#2c58c0{% else %}#5e5e64{% endif %}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="1" d="M15 8.43018V15.5702" stroke="{% if current_page == 'main' %}#2c58c0{% else %}#5e5e64{% endif %}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path opacity="1" d="M18 9.85986V14.1499" stroke="{% if current_page == 'main' %}#2c58c0{% else %}#5e5e64{% endif %}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                         <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
                                     <p>
@@ -83,6 +83,7 @@
                 </div>
             </div>
         </div>
+    <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'js/main_layout.js' %}"></script>
     {% block scripts %}
     {% endblock scripts %}

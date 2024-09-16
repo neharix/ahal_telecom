@@ -15,4 +15,15 @@ def main(request: HttpRequest):
 
 def about_device(request: HttpRequest, device_pk: int):
     device = Device.objects.get(pk=device_pk)
-    return render(request, "views/about_device.html", {"device": device})
+    if device.status == "ST":
+        status = "Durnukly"
+    elif device.status == "ER":
+        status = "Näsazlyk"
+    elif device.status == "FC":
+        status = "Düzedilmez ýagdaýda"
+    technical_works = TechnicalWork.objects.filter(device=device).order_by("-date_time")
+    return render(
+        request,
+        "views/about_device.html",
+        {"device": device, "status": status, "technical_works": technical_works},
+    )

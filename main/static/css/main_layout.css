@@ -382,3 +382,7 @@ body::-webkit-scrollbar-thumb:hover {
     color: #ffffff;
     transition: color ease-out 0.2s;
 }
+
+.ml-20px {
+    margin-left: 20px !important;
+}

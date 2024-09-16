@@ -32,4 +32,4 @@ class SpecializationAdmin(admin.ModelAdmin):
 
 @admin.register(TechnicalWork)
 class TechnicalWorkAdmin(admin.ModelAdmin):
-    readonly_fields = ("worker", "date_time", "report", "device")
+    list_display = ["worker", "date_time", "report", "device"]

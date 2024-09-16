@@ -4,7 +4,7 @@
 }
 
 #box::-webkit-scrollbar{
-    height: 5px;
+    height: 0px
 }
 
 #box::-webkit-scrollbar-track{
@@ -14,4 +14,21 @@
     background-color: transparent;    /* цвет плашки */
     border-radius: 20px;       /* закругления плашки */
     border: 3px solid transparent;  /* padding вокруг плашки */
+}
+.image {
+    border: 3px solid #2a2a2a;
+    width: 60%;
+    height: 40vh;
+    object-fit: cover;
+    border-radius: 20px;
+    justify-content: center;
+}
+.fs-12 {
+    font-size: 1.2rem;
+}
+
+.table {
+    width: 90%;
+    color: #ffffff;
+    text-wrap:nowrap;
 }

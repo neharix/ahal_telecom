@@ -31,5 +31,6 @@
 	</div>
 	{% endblock body %}
 	{% block scripts %}
-    <script src="{% static 'js/main.js' %}"></script>
+    {{ status|json_script:"status" }}
+    <script src="{% static 'js/by_status.js' %}"></script>
 	{% endblock scripts %}

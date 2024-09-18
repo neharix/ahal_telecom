@@ -30,5 +30,5 @@
 .table {
     width: 90%;
     color: #ffffff;
-    text-wrap:nowrap;
+    word-break: break-all;
 }

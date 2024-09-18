@@ -15,3 +15,11 @@ def devices_api_view(request: HttpRequest, slug: str):
     devices_list = [DeviceContainer(device, slug) for device in devices]
     serializer = DeviceSerializer(devices_list, many=True)
     return Response(serializer.data)
+
+
+@api_view(["GET"])
+def devices_by_status_api_view(request: HttpRequest, status: str, slug: str):
+    devices = Device.objects.filter(device_type__short=slug, status=status)
+    devices_list = [DeviceContainer(device, slug) for device in devices]
+    serializer = DeviceSerializer(devices_list, many=True)
+    return Response(serializer.data)

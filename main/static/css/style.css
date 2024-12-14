@@ -1,18 +1,17 @@
-body{
-    background-color: #151618;
+body {
     padding: 0px 30px;
     font-family: monospace;
 }
-.section
-{
+
+.section {
     background-color: #1C1D1F;
     border: none;
     color: snow;
     border-radius: 20px;
     padding: 10px 40px;
 }
-.serieAnim
-{
+
+.serieAnim {
     border-radius: 5px;
     height: 40vh;
     background-repeat: no-repeat;
@@ -23,10 +22,12 @@ body{
     transition: all 0.2s;
 
 }
-.serieAnim:hover{
+
+.serieAnim:hover {
     background-size: 130%;
 }
-.serie_qsd{
+
+.serie_qsd {
     background-size: 100%;
     height: 25vh;
 }
@@ -35,8 +36,8 @@ body{
     font-family: 'Gugi';
     src: url('/static/assets/webfonts/Gugi-Regular.ttf');
 }
-.preview
-{
+
+.preview {
     border-radius: 5px;
     height: 40vh;
     background-repeat: no-repeat;
@@ -47,7 +48,7 @@ body{
     transition: all 0.2s;
 
 }
-.FontsGUGI
-{
+
+.FontsGUGI {
     font-family: 'Gugi';
 }

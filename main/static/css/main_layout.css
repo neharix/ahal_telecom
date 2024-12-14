@@ -2,17 +2,21 @@
     font-family: Exo;
     src: url("/static/fonts/exo/Exo2-Regular.ttf");
 }
+
 @font-face {
     font-family: Exo-Bold;
     src: url("/static/fonts/exo/Exo2-Bold.ttf");
 }
+
 @font-face {
     font-family: Montserrat-Alternates;
     src: url("/static/fonts/montserrat-alternative/MontserratAlternates-ExtraBold.ttf");
 }
 
-body{
-    background-color: #100F10;
+body {
+    background: url(/static/img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,7 +25,7 @@ body{
     font-family: Exo;
 }
 
-nav{
+nav {
     height: 75px;
     display: flex;
     align-items: center;
@@ -31,18 +35,17 @@ nav{
 .container-d {
     display: flex;
 }
+
 .content {
     display: block;
     width: 95%;
 }
 
 .vertical-divider {
-    border-left: 2px solid #0F0E0F;
-    border-right: 2px solid #111111;
     width: 3px;
     height: 100vh;
-    background-color: #121212;
 }
+
 .horizontal-divider {
     display: flex;
     justify-content: center;
@@ -50,12 +53,9 @@ nav{
 }
 
 .horizontal-divider div {
-    border-top: 1px solid #0F0E0F;
-    border-bottom: 1px solid #111111;
     height: 3px;
     margin-left: 40px;
     width: 90%;
-    background-color: #121212;
 }
 
 aside {
@@ -63,6 +63,7 @@ aside {
     float: left;
     width: 250px;
 }
+
 .aside-inner {
     padding-right: 50px;
 }
@@ -74,6 +75,7 @@ aside {
     align-items: center;
     width: max-content;
 }
+
 .logo-wrap a, .logo-wrap a span {
     text-decoration: none;
 }
@@ -89,6 +91,7 @@ aside {
     margin-left: 40px;
     margin-bottom: 20px;
 }
+
 .list-wrap ul li {
     list-style-type: none;
     margin: 25px 0 25px 0;
@@ -103,9 +106,11 @@ aside {
     display: flex;
     margin: 0;
 }
+
 .list-wrap ul li a svg {
     margin-right: 8px;
 }
+
 .nav {
     align-items: center;
     font-size: 16px;
@@ -113,18 +118,22 @@ aside {
     text-decoration: none;
     font-family: Exo-Bold;
 }
+
 .active {
     color: #ffffff !important;
 }
-.logo-f{
-    color: white; 
+
+.logo-f {
+    color: white;
     font-size: 28px;
 }
+
 .logo-s {
-    color: #2c58c0; 
+    color: #2c58c0;
     font-size: 24px;
 }
-.main-search-wrap{
+
+.main-search-wrap {
     width: 300px;
 }
 
@@ -134,15 +143,17 @@ aside {
     background-color: transparent;
     padding: 10px;
     border-radius: 15px;
-    border: 2px solid #121212;
+    border: 2px solid white;
     display: flex;
     align-items: center;
 }
-.rm-def{
+
+.rm-def {
     background-color: transparent;
     border: none;
 }
-.search{
+
+.search {
     width: 80%;
     border: none;
     color: white;
@@ -151,10 +162,12 @@ aside {
     font-size: 16px;
     margin-left: 10px;
 }
-.search:focus{
+
+.search:focus {
     outline: none;
 }
-.main-mini-wrap{
+
+.main-mini-wrap {
     margin-left: auto;
 }
 
@@ -221,7 +234,8 @@ body::-webkit-scrollbar-thumb:hover {
     box-shadow: 3px 3px 3px rgba(44, 88, 192, 0.5);
     z-index: 11;
 }
-.c-btn{
+
+.c-btn {
     width: 220px;
     display: flex;
     justify-content: center;
@@ -246,10 +260,11 @@ body::-webkit-scrollbar-thumb:hover {
     transition: all ease-out 0.2s;
 }
 
-.stable-color{
+.stable-color {
     background-color: #2c58c0;
 
 }
+
 .stable-color:hover {
     background-color: #567edc;
 }
@@ -257,6 +272,7 @@ body::-webkit-scrollbar-thumb:hover {
 .attention-color {
     background-color: #9d9f21;
 }
+
 .attention-color:hover {
     background-color: #cdcf4e;
 }
@@ -264,6 +280,7 @@ body::-webkit-scrollbar-thumb:hover {
 .danger-color {
     background-color: #a92d2d;
 }
+
 .danger-color:hover {
     background-color: #d94a4a;
 }
@@ -274,17 +291,21 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%;
 }
 
-#categories-row::-webkit-scrollbar{
+#categories-row::-webkit-scrollbar {
     height: 5px;
 }
 
-#categories-row::-webkit-scrollbar-track{
+#categories-row::-webkit-scrollbar-track {
     background-color: transparent;
 }
+
 #categories-row::-webkit-scrollbar-thumb {
-    background-color: rgba(64, 64, 64, 0.2);    /* цвет плашки */
-    border-radius: 20px;       /* закругления плашки */
-    border: 3px solid transparent;  /* padding вокруг плашки */
+    background-color: rgba(64, 64, 64, 0.2);
+    /* цвет плашки */
+    border-radius: 20px;
+    /* закругления плашки */
+    border: 3px solid transparent;
+    /* padding вокруг плашки */
 }
 
 .stub {
@@ -295,12 +316,14 @@ body::-webkit-scrollbar-thumb:hover {
 .lds-ripple div {
     box-sizing: border-box;
 }
+
 .lds-ripple {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
 }
+
 .lds-ripple div {
     position: absolute;
     border: 4px solid #2c58c0;
@@ -308,9 +331,11 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 50%;
     animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
+
 .lds-ripple div:nth-child(2) {
     animation-delay: -0.5s;
 }
+
 @keyframes lds-ripple {
     0% {
         top: 36px;
@@ -319,6 +344,7 @@ body::-webkit-scrollbar-thumb:hover {
         height: 8px;
         opacity: 0;
     }
+
     4.9% {
         top: 36px;
         left: 36px;
@@ -326,6 +352,7 @@ body::-webkit-scrollbar-thumb:hover {
         height: 8px;
         opacity: 0;
     }
+
     5% {
         top: 36px;
         left: 36px;
@@ -333,6 +360,7 @@ body::-webkit-scrollbar-thumb:hover {
         height: 8px;
         opacity: 1;
     }
+
     100% {
         top: 0;
         left: 0;
@@ -342,7 +370,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
 }
 
-.loader-wrap{
+.loader-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -356,7 +384,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .animated-link {
-    background: linear-gradient(to right, rgba(16, 15, 16, 1), rgba(16, 15, 16, 1)), linear-gradient(to right, rgba(109, 131, 242, 1), rgb(67, 93, 220, 1));
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)), linear-gradient(to right, rgba(109, 131, 242, 1), rgb(67, 93, 220, 1));
     background-size: 100% 0.15em, 0 0.15em;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
@@ -375,10 +403,12 @@ body::-webkit-scrollbar-thumb:hover {
     color: #ffffff;
     background-size: 0 0.15em, 100% 0.15em;
 }
+
 .nav {
     transition: color ease-out 0.2s;
 }
-.nav:hover{
+
+.nav:hover {
     color: #ffffff;
     transition: color ease-out 0.2s;
 }

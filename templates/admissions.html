@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet"
+          type="text/css"
+          href="{% static 'UniWeb/admissions.css' %}">
+{% endblock %}
+{% block title %}Kabul edilişik{% endblock %}
+{% block nav %}
+    <a class="navbar-brand" href="{% url 'home' %}" style="opacity: 0.8;">
+        <img width="60rem"
+             src="{% static 'UniWeb/images/telecom-logo-fav.png' %}"
+             alt="">
+    </a>
+    <button class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor03"
+            aria-controls="navbarColor03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style="background-color: #fff">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end"
+         id="navbarColor03">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item pe-1">
+                <a class="nav-link active" href="{% url 'admissions_view' %}">
+                    <p class="h6 poppins mb-lg-2 mb-0">Enjam üpjünçiligi</p>
+                </a>
+            </li>
+            <li class="nav-item pe-1">
+                <a class="nav-link" href="{% url 'about_view' %}" aria-current="page">
+                    <p class="h6 poppins mb-lg-2 mb-0">Biz barada</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+{% block content %}
+    <div class="jumbotron d-flex align-items-start">
+        <div class="container-fluid pt-lg-0 pt-3 top-fluid-container glass mb-5">
+            <div class="container-xl my-border-m mb-5"
+                 style="height: 1352px;
+                        height: fit-content">
+                <div class="row mt-md-5 mt-3 px-xl-0 px-3">
+                    <div class="col-lg-5 pe-lg-0 px-0 d-flex flex-column justify-content-center">
+                        <h2 class="gradient-purple fw-bold poppins">{{ page_data.header }}</h2>
+                        <p class="text-muted poppins">{{ page_data.content }}</p>
+                        <small class="text-black-50 poppins mt-md-4 fw-light">*{{ page_data.muted_text }}</small>
+                    </div>
+                    <div class="col-lg-7 px-lg-5 pe-lg-0 px-0 mt-lg-0 mt-4">
+                        <div class="my-white-bg-high my-border-sm px-md-3 px-1 py-md-3 py-1"
+                             style="height: 400px">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        {% for device_type_name in device_type_names %}
+                                            <th scope="col" class="text-secondary poppins" style="font-weight: 500;">{{ device_type_name }}</th>
+                                        {% endfor %}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for count in students_count %}
+                                        <tr>
+                                            {% for number in count %}
+                                                <td class="text-muted inter">
+                                                    {{ forloop.parentloop.counter }}-nji bölüm
+                                                    <br>
+                                                    <div class="px-md-2 px-1 rounded-pill small"
+                                                         style="border: 2px solid #7cb0ff;
+                                                                width: fit-content;
+                                                                font-weight: 500">{{ number }}%</div>
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid my-container-fluid pb-0 mb-0 justify-content-center">
+        <footer class="container-xl">
+            <div class="row my-4 justify-content-center py-5">
+                <div class="col-11">
+                    <div class="row">
+                        <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                            <img class="mb-5 mx-auto"
+                                 width="180rem"
+                                 src="{% static 'UniWeb/images/telecom-logo.png' %}"
+                                 alt="">
+                        </div>
+                        <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                            <h6 class="footer-h6 mb-3 mb-lg-4 bold-text text-muted">
+                                <b>GYSGA SALGYLAR</b>
+                            </h6>
+                            <ul class="list-unstyled footer-ul">
+                                <a class="footer-a footer-menu-links" href="{% url 'admissions_view' %}">
+                                    <li>Enjam üpjünçiligi</li>
+                                </a>
+                                <a class="footer-a footer-menu-links" href="{% url 'about_view' %}">
+                                    <li>Biz barada</li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                            <h6 class="footer-h6 mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5">
+                                <b>SALGY</b>
+                            </h6>
+                            <p class="footer-p mb-1">Ahal welaýatynyň Tejen şäheri</p>
+                            <p class="footer-p">Galkynyş köçesi</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                        </p>
+                        <small class="rights">
+                            <span>&#174; 2025</span>
+                            Ähli hukuklar goralan.
+                        </small>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                        <h6 class="footer-h6 mt-55 mt-2 text-muted bold-text">
+                            <b>E-MAIL</b>
+                        </h6>
+                        <small><span><i class="fa fa-envelope" aria-hidden="true"></i> ahaltelecom@gmail.com</span></small>
+                    </div>
+                    <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end ">
+                        <h6 class="footer-h6 text-muted bold-text">
+                            <b>HABARLAŞMAK ÜÇIN</b>
+                        </h6>
+                        <small><span><i class="fa fa-phone" aria-hidden="true"></i></span> +993 61 000000</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+{% endblock %}

@@ -1,0 +1,96 @@
+body {
+    background: linear-gradient(to bottom, rgba(70, 128, 235, 0.3), rgba(164, 193, 255, 0.5));
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    background: transparent;
+}
+
+.main-heading {
+    color: #545454;
+    font-weight: 700;
+}
+
+.subheading {
+    color: #6a6a6a;
+    font-weight: 600;
+}
+
+.img-fluid {
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.stats {
+    font-weight: 500;
+    color: #545454;
+}
+
+.link-hover:hover {
+    text-decoration: underline;
+}
+
+.headings {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.small-text {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.page-2-text p {
+    font-weight: 400;
+}
+
+.page-2-text h1 {
+    font-weight: 700;
+    background: -webkit-linear-gradient(0deg, #7567f0, #4eabed);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+}
+
+.thick-gradient-line {
+    background: linear-gradient(to right bottom, rgba(21, 94, 99, 0.6), rgba(21, 94, 99, 0.4));
+    height: 7px;
+    border-radius: 10px;
+}
+
+.end-buttons {
+    background: linear-gradient(#4b3bdc, #18669d);
+    color: #fff;
+    font-weight: 600;
+    width: fit-content;
+    transition: all ease-in 0.3s;
+}
+
+.gradient-text-2 {
+    background: -webkit-linear-gradient(-70deg, #7567f0, #4eabed);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+}
+
+.my-btn:hover {
+    background: -webkit-linear-gradient(-70deg, #4b3bdc, #73a8ce);
+    color: #fff;
+    transition: all ease-out 0.3s;
+}
+
+.carousel-inner {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

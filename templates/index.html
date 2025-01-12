@@ -1,0 +1,209 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet"
+          type="text/css"
+          href="{% static 'UniWeb/home.css' %}">
+{% endblock %}
+{% block title %}
+    Baş sahypa
+{% endblock title %}
+{% block nav %}
+    <a class="navbar-brand" href="{% url 'home' %}" style="opacity: 0.8;">
+        <img width="60rem"
+             src="{% static 'UniWeb/images/telecom-logo-fav.png' %}"
+             alt="">
+    </a>
+    <button class="navbar-toggler collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor03"
+            aria-controls="navbarColor03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style="background-color: #fff">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end"
+         id="navbarColor03">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item pe-1">
+                <a class="nav-link" href="{% url 'admissions_view' %}">
+                    <p class="h6 poppins mb-lg-2 mb-0">Enjam üpjünçiligi</p>
+                </a>
+            </li>
+            <li class="nav-item pe-1">
+                <a class="nav-link" href="{% url 'about_view' %}" aria-current="page">
+                    <p class="h6 poppins mb-lg-2 mb-0">Biz barada</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}
+{% block content %}
+    <main>
+        <section>
+            <div class="container-xl mt-xl-5 mt-lg-5 mt-md-3 mt-3 mb-md-5">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-12">
+                        <div class="headings">
+                            <div class="flex-column pe-xl-5 pe-md-3 pe-0">
+                                <span class="h1 poppins main-heading">{{ page_data.main_heading }}</span>
+                                <h5 class="h5 inter subheading mt-3">{{ page_data.sub_heading }}</h5>
+                                <div class="thick-gradient-line mt-xl-3 mt-lg-3 mt-md-3 mt-4"></div>
+                            </div>
+                            <div class="flex-column">
+                                <div class="row gx-2 py-3 mt-xl-1 mt-lg-3 mt-md-2 mt-3 mb-lg-3 mb-md-3 mb-2">
+                                    {% for column in page_data.info_columns.all %}
+                                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 py-1">
+                                            <p class="dosis stats p-0">
+                                                {{ column.value }}
+                                                <br>
+                                                <span style="color: #6a6a6a;">{{ column.expression }}</span>
+                                            </p>
+                                        </div>
+                                    {% endfor %}
+                                    <p class="text-muted small-text">* 2024-nji ýylda geçirilen barlagyň esasynda alnan maglumatlar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-12 mt-xl-0 mt-lg-0 mt-md-5 mt-2 mb-xl-3 mb-lg-5 mb-4">
+                        <div class="d-flex justify-content-center">
+                            <img class="img-fluid"
+                                 src="/media/{{ page_data.image }}"
+                                 alt="college_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="d-flex">
+                <div class="container-xl my-xl-5 pb-xl-4">
+                    <div class="row py-4 px-2">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-12 page-2-text p-0">
+                            <div class="headings">
+                                <div class="container p-0">
+                                    <h1 class="poppins gradient-text">{{ page_data.about_heading }}</h1>
+                                    <div class="thick-gradient-line mt-2 mb-5"></div>
+                                    <p class="inter text-muted">{{ page_data.about_description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-12 mt-lg-0 mt-md-3 mt-4 px-md-4">
+                            <div id="carouselExampleDark"
+                                 class="carousel slide"
+                                 data-bs-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    {% for carousel_data in page_data.carousel_images.all %}
+                                        {% if forloop.counter0 == 0 %}
+                                            <li data-bs-target="#carouselExampleDark"
+                                                data-bs-slide-to="0"
+                                                class="active"></li>
+                                        {% else %}
+                                            <li data-bs-target="#carouselExampleDark"
+                                                data-bs-slide-to="{{ forloop.counter }}"></li>
+                                        {% endif %}
+                                    {% endfor %}
+                                </ol>
+                                <div class="carousel-inner" style="border-radius: 10px;">
+                                    {% for carousel_data in page_data.carousel_images.all %}
+                                        {% if forloop.counter0 == 0 %}
+                                            <div class="carousel-item active" data-bs-interval="5000">
+                                                <img src="/media/{{ carousel_data.image }}" class="d-block w-100">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <h5 class="poppins">{{ carousel_data.header }}</h5>
+                                                    <p class="inter">{{ carousel_data.description }}</p>
+                                                </div>
+                                            </div>
+                                        {% else %}
+                                            <div class="carousel-item" data-bs-interval="5000">
+                                                <img src="/media/{{ carousel_data.image }}" class="d-block w-100">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <h5 class="poppins">{{ carousel_data.header }}</h5>
+                                                    <p class="inter">{{ carousel_data.description }}</p>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <a class="carousel-control-prev"
+                                   href="#carouselExampleDark"
+                                   role="button"
+                                   data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </a>
+                                <a class="carousel-control-next"
+                                   href="#carouselExampleDark"
+                                   role="button"
+                                   data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid my-container-fluid pb-0 mb-0 justify-content-center">
+                <footer class="container-xl">
+                    <div class="row my-4 justify-content-center py-5">
+                        <div class="col-11">
+                            <div class="row">
+                                <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                                    <img class="mb-5 mx-auto"
+                                         width="180rem"
+                                         src="{% static 'UniWeb/images/telecom-logo.png' %}"
+                                         alt="">
+                                </div>
+                                <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                    <h6 class="footer-h6 mb-3 mb-lg-4 bold-text text-muted">
+                                        <b>GYSGA SALGYLAR</b>
+                                    </h6>
+                                    <ul class="list-unstyled footer-ul">
+                                        <a class="footer-a footer-menu-links" href="{% url 'admissions_view' %}">
+                                            <li>Enjam üpjünçiligi</li>
+                                        </a>
+                                        <a class="footer-a footer-menu-links" href="{% url 'about_view' %}">
+                                            <li>Biz barada</li>
+                                        </a>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                    <h6 class="footer-h6 mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5">
+                                        <b>SALGY</b>
+                                    </h6>
+                                    <p class="footer-p mb-1">Ahal welaýatynyň Tejen şäheri</p>
+                                    <p class="footer-p">Galkynyş köçesi</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                                </p>
+                                <small class="rights">
+                                    <span>&#174; 2025</span>
+                                    Ähli hukuklar goralan.
+                                </small>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                                <h6 class="footer-h6 mt-55 mt-2 text-muted bold-text">
+                                    <b>E-MAIL</b>
+                                </h6>
+                                <small><span><i class="fa fa-envelope" aria-hidden="true"></i> ahaltelecom@gmail.com</span></small>
+                            </div>
+                            <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end ">
+                                <h6 class="footer-h6 text-muted bold-text">
+                                    <b>HABARLAŞMAK ÜÇIN</b>
+                                </h6>
+                                <small><span><i class="fa fa-phone" aria-hidden="true"></i></span> +993 61 000000</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -4,6 +4,7 @@ html, body {
     overflow-x: hidden;
     background: linear-gradient(to right bottom, #b5ffed, #c1fef0, #cdfdf3, #d8fbf5, #e4faf6);
 }
+
 a {
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
@@ -30,27 +31,34 @@ input {
     /* padding: 3rem 2rem; */
     border-radius: 0 0 7px 7px;
     /* background-color: #BAE8E8; */
-    background: linear-gradient(to right bottom, #CAFCEF,#A8F1E2);
+    background: linear-gradient(to right bottom, #CAFCEF, #A8F1E2);
     /* background:linear-gradient(to right bottom, rgba(255,255,255,0.7),rgba(255,255,255,0.3)); */
 }
+
 .navbar-brand p {
     font-weight: 600;
 }
+
 .nav-item p {
     font-weight: 600;
 }
+
 .poppins {
     font-family: 'Poppins', sans-serif;
 }
+
 .inter {
     font-family: 'Inter', sans-serif;
 }
+
 .dosis {
     font-family: 'Dosis', sans-serif;
 }
+
 .ssp {
     font-family: 'Source Sans Pro', sans-serif;
 }
+
 /* SCROLL BAR CSS */
 
 /* width */
@@ -72,3 +80,9 @@ background: rgb(200, 200, 200);
 /* ::-webkit-scrollbar-thumb:hover {
 background: #ccc; 
 } */
+
+.rm-def, .rm-def:focus, .rm-def:hover {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}

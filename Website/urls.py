@@ -27,6 +27,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("404/", error404_view, name="error404"),
     path("about/", about_view, name="about_view"),
+    path("device/<int:device_id>/", about_device),
     path("admissions/", admissions_view, name="admissions_view"),
 ]
 

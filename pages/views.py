@@ -3,6 +3,8 @@ from django.shortcuts import render
 
 from UniWeb.models import *
 
+from .models import Device
+
 
 def home_view(request, *args, **kwargs):
     try:
@@ -64,4 +66,9 @@ def admissions_view(request, *args, **kwargs):
     )
     context["device_type_names"] = device_type_names
     context["students_count"] = students_count
+    context["devices"] = Device.objects.all()
     return render(request, "admissions.html", context)
+
+
+def about_device(request, device_id):
+    return render(request, "device.html", {"device": Device.objects.get(id=device_id)})

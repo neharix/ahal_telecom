@@ -66,6 +66,13 @@
                             </div>
                             <div class="flex-column">
                                 <div class="row gx-2 py-3 mt-xl-1 mt-lg-3 mt-md-2 mt-3 mb-lg-3 mb-md-3 mb-2">
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 py-1">
+                                        <p class="dosis stats p-0">
+                                            {{ servers_count }}
+                                            <br>
+                                            <span style="color: #6a6a6a;">Serwerleriň sany</span>
+                                        </p>
+                                    </div>
                                     {% for column in page_data.info_columns.all %}
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-12 py-1">
                                             <p class="dosis stats p-0">
@@ -75,6 +82,13 @@
                                             </p>
                                         </div>
                                     {% endfor %}
+                                    <div class="col-lg-3 col-md-6 col-sm-6 col-12 py-1">
+                                        <p class="dosis stats p-0">
+                                            {{ routers_count }}
+                                            <br>
+                                            <span style="color: #6a6a6a;">Kommutatorlaryň sany</span>
+                                        </p>
+                                    </div>
                                     <p class="text-muted small-text">* 2024-nji ýylda geçirilen barlagyň esasynda alnan maglumatlar.</p>
                                 </div>
                             </div>

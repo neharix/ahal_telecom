@@ -11,6 +11,10 @@ def home_view(request, *args, **kwargs):
         context = {"page_data": MainPageContent.objects.all()[0]}
     except:
         context = {}
+    context["servers_count"] = Device.objects.filter(d_type__name="Serwerler").count()
+    context["routers_count"] = Device.objects.filter(
+        d_type__name="Kommutatorlar"
+    ).count()
     return render(request, "index.html", context)
 
 
